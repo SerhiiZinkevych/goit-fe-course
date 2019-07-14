@@ -1,20 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap");
 
-* {
-  /* outline: 1px solid red; */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
 
 body {
-  box-sizing: border-box;
   font-family: "Playfair Display", serif;
   font-size: 14px;
   line-height: 24px;
   width: 900px;
   margin: 0 auto;
   color: #626262;
+}
+
+main {
+  padding-bottom: 30px;
 }
 
 .nav-bar {
@@ -40,6 +49,7 @@ body {
 }
 
 .nav-list-item a {
+  display: block;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -54,19 +64,15 @@ body {
 }
 
 .list-item {
-  box-sizing: border-box;
   display: inline-block;
   width: 440px;
   padding: 10px;
   font-size: 14px;
   margin-bottom: 65px;
+  margin-right: 20px;
 }
 .list-item:nth-child(2n) {
-  margin-left: 10px;
-}
-
-.list-item:nth-child(2n-1) {
-  margin-right: 10px;
+  margin-right: 0;
 }
 
 .list-item:hover {
@@ -75,7 +81,7 @@ body {
 }
 
 .wrapper {
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
 }
 /* .wrapper img {
@@ -87,15 +93,17 @@ body {
   color: #b4ad9e;
   font-size: 14px;
   font-weight: 300;
-  margin: 30px 0;
+  padding: 24px 0;
+  /* height: 74px; */
+  /* vertical-align: middle; */
 }
 .wrapper h2 {
   font-size: 30px;
   font-weight: 500;
-  margin: 30px 0;
+  padding-bottom: 30px;
 }
 button {
-  margin: 30px auto;
+  margin: 30px auto 0 auto;
   display: block;
   border-width: 1px;
   border-color: rgb(98, 98, 98);
