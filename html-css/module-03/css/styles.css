@@ -12,7 +12,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 14px;
   line-height: 24px;
-  width: 1200px;
+  width: 900px;
   margin: 0 auto;
   color: #626262;
 }
@@ -56,8 +56,8 @@ body {
 .list-item {
   box-sizing: border-box;
   display: inline-block;
-  width: 470px;
-  padding: 25px;
+  width: 440px;
+  padding: 10px;
   font-size: 14px;
   margin-bottom: 65px;
 }
