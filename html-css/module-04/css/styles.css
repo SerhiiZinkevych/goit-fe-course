@@ -194,7 +194,6 @@ body {
 
 .blog-list-item p {
   margin-bottom: 10px;
-  font-weight: ;
 }
 
 .blog-list-item button {
@@ -208,6 +207,7 @@ body {
 }
 
 .blog-list-item button:hover {
-  background-color: #00eeff;
+  color: rgb(255, 255, 255);
+  background-color: #323232;
   cursor: pointer;
 }
