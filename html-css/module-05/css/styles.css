@@ -1,0 +1,355 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,900&display=swap");
+
+html {
+  box-sizing: border-box;
+  --page-width: 1110px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #555252;
+}
+
+main {
+  background-color: #e9f0fd;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* >>>>>>>> HEADER <<<<<<<<< */
+
+/* ------- LOGO + NAVIGATION --------- */
+.page-header nav {
+  position: relative;
+  width: var(--page-width);
+  height: 100px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto";
+  color: #555252;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-logo::first-letter {
+  color: rgb(26, 188, 156);
+  font-weight: 900;
+}
+
+.site-navigation {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  list-style-type: none;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.site-navigation li:last-child {
+  margin-right: 0;
+}
+
+.site-navigation li a {
+  display: block;
+  color: #0f0101;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.site-navigation li a:hover,
+.site-navigation li a:focus {
+  color: rgb(26, 188, 156);
+}
+/* ------- END (LOGO + NAVIGATION) --------- */
+
+/* ------- SLIDER ------- */
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+}
+
+.slider-btn {
+  position: absolute;
+  border: none;
+  background-color: rgb(26, 188, 156);
+  width: 104px;
+  height: 104px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  font-family: "Pe";
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-btn-prev {
+  left: 245px;
+}
+
+.slider-btn-next {
+  right: 245px;
+}
+
+.slides {
+  line-height: 0;
+}
+
+/* SEMI-TRANSPARENT BLACK BACKGROUND FOR SLIDER */
+.slides-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.slides-item {
+  list-style: none;
+}
+
+.slides-image {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slides-item-descr-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.slides-item-header {
+  font: 900 60px Roboto, Arial, sans-serif;
+  line-height: 82px;
+}
+
+.slides-item-descr {
+  font: 100 24px Roboto, Arial, sans-serif;
+  line-height: 54px;
+}
+/* ------- END (SLIDER) ------- */
+/* >>>>>>>> END (HEADER) <<<<<<<<< */
+
+/* >>>>>>>> GALLERY SECTION <<<<<<<<< */
+.gallery {
+  width: var(--page-width);
+  margin: 0 auto;
+}
+
+.title {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 40px;
+  font-family: Roboto, Arial, sans-serif;
+  color: rgb(81, 81, 81);
+  text-transform: uppercase;
+}
+
+.title::after {
+  display: block;
+  content: "";
+  width: 164px;
+  height: 7px;
+  margin: 30px auto 0 auto;
+  background-color: #1abc9c;
+}
+
+.gallery-list {
+  padding: 92px 0;
+}
+
+/* ------- GALLERY CARD ------- */
+.gallery-list-item {
+  position: relative;
+  float: left;
+  margin: 0 30px 30px 0;
+  list-style-type: none;
+}
+
+.gallery-list-item:nth-child(4n + 4) {
+  margin-right: 0;
+}
+
+.gallery-list-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.item-link {
+  display: block;
+  background-color: #e9f0fd;
+}
+
+.item-link img {
+  display: block;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.item-link:hover .item-description,
+.item-link:focus .item-description {
+  background-color: #1abc9c;
+}
+
+.item-link:hover .item-price,
+.item-link:focus .item-price {
+  background-color: #7fd9c7;
+}
+
+.item-link:hover .item-overlay,
+.item-link:focus .item-overlay {
+  opacity: 1;
+}
+
+.item-description {
+  position: relative;
+  font-size: 18px;
+  font-family: "Roboto";
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #323232;
+}
+
+.item-name {
+  display: inline-block;
+  line-height: 40px;
+  padding-left: 10px;
+}
+
+.item-price {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  line-height: 40px;
+  background-color: #8c8c8c;
+}
+/* ------- END(GALLERY CARD) ------- */
+
+/* ---------- BLOCK WITH OVERLAPPING BACKGROUND AND ICONS ----------  */
+.item-overlay {
+  position: absolute;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  width: 235px;
+  height: 262px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 0;
+}
+
+.buttons-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pe-7s-cart {
+  width: 166px;
+  height: 50px;
+}
+
+.pe-7s-cart::before {
+  font-size: 30px;
+}
+
+.pe-7s-cart span {
+  float: right;
+  line-height: 30px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.overlay-btn {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.overlay-btn:hover {
+  background-color: #1abc9c;
+}
+
+.overlay-btn:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.overlay-btn:nth-of-type(4) {
+  margin: 0;
+}
+/* ---------- END (BLOCK WITH OVERLAPPING BACKGROUND AND ICONS) ----------  */
+/* >>>>>>>> END (GALLERY SECTION) <<<<<<<<< */
+
+/* >>>>>>>> FOOTER <<<<<<<< */
+footer {
+  height: 88px;
+  background-color: #323232;
+}
+
+footer p {
+  line-height: 88px;
+  text-align: center;
+  color: #fff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+footer p span {
+  color: #46bfa9;
+}
+/* >>>>>>> END (FOOTER) <<<<<<< */
