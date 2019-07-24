@@ -46,12 +46,11 @@ main {
   width: var(--page-width);
   height: 100px;
   margin: 0 auto;
+  padding-top: calc(50px - 13px);
 }
 
 .site-logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  float: left;
   display: block;
   font-size: 30px;
   font-family: "Roboto";
@@ -66,10 +65,7 @@ main {
 }
 
 .site-navigation {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  float: right;
   list-style-type: none;
 }
 
