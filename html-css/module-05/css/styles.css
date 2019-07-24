@@ -35,7 +35,7 @@ main {
 
 .container {
   margin: 0 auto;
-  width: var(--page-width);
+  min-width: var(--page-width);
 }
 
 /* >>>>>>>> HEADER <<<<<<<<< */
@@ -101,6 +101,7 @@ main {
 .slider {
   position: relative;
   width: 100vw;
+  min-width: var(--page-width);
   height: 600px;
 }
 
@@ -201,6 +202,7 @@ main {
 
 .gallery-list {
   padding: 92px 0;
+  width: var(--page-width);
 }
 
 /* ------- GALLERY CARD ------- */
@@ -342,6 +344,7 @@ main {
 footer {
   height: 88px;
   background-color: #323232;
+  width: 100vw;
 }
 
 footer p {
