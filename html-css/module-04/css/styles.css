@@ -15,8 +15,6 @@ html {
 }
 
 body {
-  width: 1110px;
-  margin: 0 auto;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -30,8 +28,12 @@ body {
   clear: both;
 }
 
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
 .page-header {
-  width: 1600px;
   height: 100px;
 }
 .page-header nav {
@@ -91,7 +93,7 @@ body {
 }
 
 .site-navigation li {
-  display: inline-block;
+  float: left;
   margin-right: 30px;
 }
 
@@ -101,7 +103,7 @@ body {
 
 .title {
   margin: 0;
-  padding: 0;
+  padding-top: 40px;
   text-align: center;
   font-size: 48px;
   line-height: 40px;
@@ -199,13 +201,13 @@ body {
 .blog-list-item h3 {
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 23px;
 }
 
 .blog-list-item h3::after {
   content: "";
   display: block;
   margin-top: 14px;
-  margin-bottom: 23px;
   background-color: rgb(78, 198, 171);
   width: 136px;
   height: 3px;
@@ -215,17 +217,20 @@ body {
   margin-bottom: 10px;
 }
 
-.blog-list-item button {
+.blog-list-item a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
   font-size: 16px;
   color: #fff;
   border: 0;
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
   width: 159px;
-  height: 51px;
 }
 
-.blog-list-item button:hover {
+.blog-list-item a:hover {
   color: rgb(255, 255, 255);
   background-color: #323232;
   cursor: pointer;
