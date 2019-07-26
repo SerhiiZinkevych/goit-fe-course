@@ -135,6 +135,16 @@ main {
   list-style: none;
 }
 
+.service-wrapper {
+  display: block;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #999999;
+}
+
 .services-list-item {
   display: flex;
   margin-bottom: 100px;
