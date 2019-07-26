@@ -6,6 +6,9 @@
 html {
   box-sizing: border-box;
   --page-width: 1200px;
+  --theme-color-main: #95e1d3;
+  --theme-color-primary-accents: #f38181;
+  --theme-color-secondary-accents: #fce38a;
 }
 
 *,
@@ -24,6 +27,10 @@ body {
   color: #999999;
 }
 
+main {
+  margin-bottom: 80px;
+}
+
 .container {
   width: var(--page-width);
   margin: 0 auto;
@@ -38,15 +45,14 @@ body {
 
 .page-nav {
   display: flex;
-  /* height: 80px; */
-  align-items: baseline;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .site-logo {
   display: block;
   font: bold 30px "Montserrat";
-  color: #95e1d3;
+  color: var(--theme-color-main);
   text-decoration: none;
 }
 
@@ -60,39 +66,40 @@ body {
 .site-navigation-link {
   display: block;
   font: 400 14px "Montserrat";
-  color: #95e1d3;
+  color: var(--theme-color-main);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .site-navigation-link:hover {
-  color: #f38181;
+  color: var(--theme-color-primary-accents);
 }
 
-.site-navigation-link:hover::after {
+.site-navigation-link::after {
   display: block;
   content: "";
   background-color: rgb(243, 129, 129);
   width: 100%;
   height: 3px;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.site-navigation-link:hover::after {
+  opacity: 1;
 }
 
 /* SERVICES SECTION */
+.services-section {
+  margin-bottom: 80px;
+}
+
 .section-title {
   font: bold 30px "Montserrat";
   color: #333;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 50px;
-}
-
-.section-title::after {
-  display: block;
-  background-color: rgb(243, 129, 129);
-  content: "";
-  width: 60px;
-  height: 3px;
-  margin: 30px auto 0 auto;
 }
 
 .section-title::before {
@@ -102,6 +109,15 @@ body {
   text-transform: initial;
   font-weight: 300;
   line-height: 50px;
+}
+
+.section-title::after {
+  display: block;
+  background-color: rgb(243, 129, 129);
+  content: "";
+  width: 60px;
+  height: 3px;
+  margin: 30px auto 0 auto;
 }
 
 .services-section .section-title::before {
@@ -114,11 +130,9 @@ body {
 
 .services-list {
   display: flex;
-  /* flex-basis: 380px; */
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
-  margin-bottom: 100px;
 }
 
 .services-list-item {
@@ -131,20 +145,20 @@ body {
 }
 
 .services-title {
-  font-size: 14px;
   margin-bottom: 10px;
   font-family: "Montserrat";
-  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 1.2;
-  font-weight: 300;
+  color: rgb(51, 51, 51);
 }
 
 .services-description {
-  /* padding: 5px; */
   max-width: 300px;
 }
 
+/* SERVICES ICONS */
 .services-list-item::before {
   display: block;
   min-width: 80px;
@@ -177,6 +191,8 @@ body {
 .line-graph-icon::before {
   background-image: url("../img/services-icons/line_graph.png");
 }
+
+/* TEAM SECTION */
 .team-section-description {
   padding: 0 110px;
   margin-bottom: 90px;
@@ -189,37 +205,172 @@ body {
   list-style: none;
 }
 
+.pic-wrapper {
+  position: relative;
+  width: 380px;
+  height: 470px;
+  background-color: var(--theme-color-main);
+}
+
+.pic-wrapper:hover .team-member-pic {
+  transform: translate(-10px, -10px);
+}
+
+.pic-wrapper:hover .socials-wrapper {
+  transform: translate(-10px, -10px);
+  opacity: 1;
+}
+
+/* GRADIENT BOX */
+.socials-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 129, 129, 0.9),
+    rgba(252, 227, 138, 0.9)
+  );
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  z-index: 1;
+}
+
+.team-member-pic {
+  transition: transform 0.2s linear;
+}
+
+.social-icons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+/* TEAM MEMBER SOCIAL ICONS */
+.social-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  text-decoration: none;
+  margin-right: 1px;
+  transition: background-color 0.2s linear;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--theme-color-main);
+}
+
+.facebook-icon {
+  background: no-repeat center url("../img/social-icons/facebook.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.twitter-icon {
+  background: no-repeat center url("../img/social-icons/twitter.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.pinterest-icon {
+  background: no-repeat center url("../img/social-icons/pinterest.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.instagram-icon {
+  background: no-repeat center url("../img/social-icons/instagram.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.team-member-info {
+  padding-top: 20px;
+}
+
 .team-member-name {
-  font-size: 14px;
-  margin-bottom: 10px;
+  padding: 10px 0;
   font-family: "Montserrat";
-  color: rgb(51, 51, 51);
-  text-transform: uppercase;
-  line-height: 1.2;
+  font-size: 14px;
   font-weight: 300;
+  text-transform: uppercase;
   text-align: center;
+  color: rgb(51, 51, 51);
 }
 
 .team-member-position {
-  font-size: 15px;
   font-family: "Roboto Light";
-  color: rgb(153, 153, 153);
+  font-size: 15px;
   font-style: italic;
   line-height: 1.6;
   text-align: center;
+  color: rgb(153, 153, 153);
 }
 
+/* FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 63px;
+  border-top: 1px solid rgb(229, 229, 229);
 }
 
 .copyright {
-  font-size: 14px;
   font-family: "Montserrat";
+  font-size: 14px;
   color: rgb(51, 51, 51);
-  line-height: 1.2;
 }
+
 .copyright span {
-  color: #f38181;
+  color: var(--theme-color-primary-accents);
+}
+
+.subscribe-form {
+  display: flex;
+  height: 40px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  min-width: 230px;
+  border: 1px solid rgb(229, 229, 229);
+  border-right: none;
+  font-style: italic;
+}
+
+.subscribe-form input::placeholder {
+  color: #ccc;
+}
+
+.subscribe-form button {
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--theme-color-main);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: var(--theme-color-primary-accents);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
