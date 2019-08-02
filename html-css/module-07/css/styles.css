@@ -1,3 +1,63 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container{
+    width: 940px;
+    margin:0 auto;
+}
+
+.site-nav{
+    display:flex;
+    justify-content: space-between;
+}
+
+.site-logo {
+    display: block;
+    font-size: 26px;
+    font-family: "Lily Script One";
+    color:#fed136;
+    line-height: 1.577;
+    text-decoration: none;
+  }
+
+.site-nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 485px;
+    list-style-type: none;
+}
+
+.site-nav-link{
+    display: block;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: #222;
+    text-transform: uppercase;
+    /* line-height: 41px; */
+    text-decoration: none;
+}
+
+.site-nav-link:hover{
+    color: #fed136;
+}
 
 /* roboto-slab-regular - latin */
 @font-face {
