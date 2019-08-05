@@ -102,7 +102,7 @@ main {
   margin-bottom: 50px;
 }
 
-.section-title::before {
+.section-title span{
   display: block;
   font-family: "Kaushan Script";
   font-size: 24px;
@@ -118,14 +118,6 @@ main {
   width: 60px;
   height: 3px;
   margin: 30px auto 0 auto;
-}
-
-.services-section .section-title::before {
-  content: "We work with";
-}
-
-.team-section .section-title::before {
-  content: "Who we are";
 }
 
 .services-list {
