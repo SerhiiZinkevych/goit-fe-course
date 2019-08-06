@@ -135,7 +135,7 @@ html{
 .service-title{
     font-family: "Montserrat";
     font-size: 1.2rem;
-    margin:20px 0;
+    padding:20px 0;
     text-transform: capitalize;
 }
 
