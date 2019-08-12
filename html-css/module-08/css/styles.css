@@ -1,0 +1,90 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.content{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.site-header{
+    height:540px;
+    background: url("../img/header-bg.png");
+    background-repeat: no-repeat;
+}
+
+.site-nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding-top: 20px;
+    height: 200px;
+}
+
+.site-nav a{
+    font-family: Montserrat, Arial, sans-serif;
+    /* font-size: 14px; */
+    font-weight: 700px;
+    text-decoration: none;
+    color:white;
+}
+
+.site-logo{
+    display:block;
+    font-size: 20px;
+    order:1;
+}
+
+.site-menu{
+    display:flex;
+    list-style: none;
+}
+
+.login, .signup{
+    display: block;
+    width: 90px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.signup{
+    border:2px solid #fff;
+}
+
+.site-slogan{
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 30px;
+    color:#fff;
+    text-transform: uppercase;
+    text-align:center;
+}
+
+.site-slogan-desc{
+    font-size: 18px;
+    font-family: "Roboto";
+    color: #fff;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.button{
+    
+}
