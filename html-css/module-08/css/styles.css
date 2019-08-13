@@ -26,8 +26,7 @@ body {
 
 .site-header {
   position: relative;
-  min-width: 280px;
-  width: 100%;
+  min-width: 320px;
   height: 540px;
 }
 
@@ -36,20 +35,18 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-content: space-between;
-  padding-top: 20px;
-  height: 200px;
 }
 
-.site-nav a {
-  font-family: Montserrat, Arial, sans-serif;
-  /* font-size: 14px; */
+.site-logo, .login, .signup {
+  display: block;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
 .site-logo {
-  display: block;
   font-size: 20px;
 }
 
@@ -60,10 +57,8 @@ body {
 
 .login,
 .signup {
-  display: block;
   width: 90px;
   line-height: 36px;
-  text-align: center;
   border: 2px solid transparent;
 }
 
@@ -76,52 +71,44 @@ body {
   box-sizing: border-box;
 }
 
-.signup {
-}
-
 .site-slogan {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   /* padding: 20px 0; */
+  margin: 0;
 }
 
 .site-slogan-desc {
-  font-size: 18px;
   font-family: "Roboto";
   color: #fff;
   text-align: center;
-  /* padding: 0 50px; */
-  margin-bottom: 20px;
+}
+
+.search-link, .load-more-btn{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .search-link {
-  display: block;
-  margin: 0 auto;
   width: 280px;
-  line-height: 40px;
-  text-align: center;
-  font-family: Montserrat, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   background-color: #ff4e50;
-  border-radius: 20px;
 }
 
 .load-more-btn {
   background-color: #fff;
   border: 2px solid #ff4e50;
   color: #ff4e50;
-  line-height: 40px;
-  text-align: center;
-  font-family: Montserrat, Arial, sans-serif;
-  border-radius: 20px;
-  cursor: pointer;
   padding: 0 30px;
-  display: block;
-  margin: 0 auto;
 }
 
 .partners-section {
