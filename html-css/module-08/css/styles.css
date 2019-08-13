@@ -19,17 +19,16 @@ body {
 }
 
 .container {
-  width: 320px;
+  min-width: 280px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .site-header {
-  min-width: 320px;
+  position: relative;
+  min-width: 280px;
   width: 100%;
   height: 540px;
-  background: url("../img/header-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .site-nav {
@@ -44,7 +43,7 @@ body {
 .site-nav a {
   font-family: Montserrat, Arial, sans-serif;
   /* font-size: 14px; */
-  font-weight: 700px;
+  font-weight: 700;
   text-decoration: none;
   color: white;
 }
@@ -52,7 +51,6 @@ body {
 .site-logo {
   display: block;
   font-size: 20px;
-  order: 1;
 }
 
 .site-menu {
@@ -66,11 +64,19 @@ body {
   width: 90px;
   line-height: 36px;
   text-align: center;
+  border: 2px solid transparent;
+}
+
+.login:hover,
+.login:focus,
+.signup:hover,
+.signup:focus {
+  border: 2px solid #fff;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .signup {
-  border: 2px solid #fff;
 }
 
 .site-slogan {
@@ -79,7 +85,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
 
 .site-slogan-desc {
@@ -87,11 +93,11 @@ body {
   font-family: "Roboto";
   color: #fff;
   text-align: center;
-  padding: 0 50px;
+  /* padding: 0 50px; */
   margin-bottom: 20px;
 }
 
-.button {
+.search-link {
   display: block;
   margin: 0 auto;
   width: 280px;
@@ -104,8 +110,22 @@ body {
   border-radius: 20px;
 }
 
+.load-more-btn {
+  background-color: #fff;
+  border: 2px solid #ff4e50;
+  color: #ff4e50;
+  line-height: 40px;
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0 30px;
+  display: block;
+  margin: 0 auto;
+}
+
 .partners-section {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .partners-title {
@@ -120,15 +140,21 @@ body {
 }
 
 .partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
+  margin-bottom: 30px;
+  box-sizing: content-box;
 }
 
 .partners-item {
   text-align: center;
-  margin-bottom: 30px;
+  width: 220px;
 }
 
 .partner-link {
+  display: block;
   text-decoration: none;
   /* cursor: pointer; */
 }
@@ -164,21 +190,21 @@ body {
   border: 4px solid #fff;
 }
 
-.partners-item:nth-child(1) > .photo-wrapper::after {
-  background: url("../img/partners-icons/tv-icon.png") #ff4e50 no-repeat center;
+.partners-item:nth-child(1) .photo-wrapper::after {
+  background: url("../img/partners-icons/tv-icon.svg") #ff4e50 no-repeat center;
 }
 
 .partners-item:nth-child(2) .photo-wrapper::after {
-  background: url("../img/partners-icons/bottle-icon.png") #ffa507 no-repeat
+  background: url("../img/partners-icons/bottle-icon.svg") #ffa507 no-repeat
     center;
 }
 
 .partners-item:nth-child(3) .photo-wrapper::after {
-  background: url("../img/partners-icons/cup-icon.png") #1cd7ad no-repeat center;
+  background: url("../img/partners-icons/cup-icon.svg") #1cd7ad no-repeat center;
 }
 
 .partners-item:nth-child(4) .photo-wrapper::after {
-  background: url("../img/partners-icons/paper-airplane-icon.png") #4e73db
+  background: url("../img/partners-icons/paper-airplane-icon.svg") #4e73db
     no-repeat center;
 }
 
@@ -192,5 +218,16 @@ body {
 
 .partner-about {
   color: #666;
-  padding: 0 50px;
+  /* padding: 0 50px; */
 }
+
+/* .Rectangle_1 {
+    background-color: rgb(26, 25, 21);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1440px;
+    height: 700px;
+    z-index: 42;
+  }
+   */
