@@ -1,0 +1,197 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.header-wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 540px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.site-logo,
+.login,
+.signup {
+  display: block;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.site-logo {
+  font-size: 20px;
+}
+
+.site-menu {
+  display: flex;
+  list-style: none;
+}
+
+.login,
+.signup {
+  box-sizing: border-box;
+  width: 90px;
+  line-height: 36px;
+  border: 2px solid transparent;
+}
+
+.login:hover,
+.login:focus,
+.signup:hover,
+.signup:focus {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.site-slogan {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.site-slogan-desc {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.find-partner-btn {
+  width: 280px;
+  color: #fff;
+  background-color: #ff4e50;
+  border:none;
+}
+
+.load-more-btn {
+  background-color: #fff;
+  border: 2px solid #ff4e50;
+  color: #ff4e50;
+  padding: 0 30px;
+}
+
+.partners-section {
+  padding-bottom: 30px;
+}
+
+.partners-title {
+  padding-top: 65px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 30px;
+  box-sizing: content-box;
+}
+
+.partners-item {
+  text-align: center;
+  width: 220px;
+}
+
+.partner-link {
+  display: block;
+  text-decoration: none;
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+
+.partner-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.photo-wrapper::after {
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  content: "";
+}
+
+.partners-item:nth-child(4n+1) .photo-wrapper::after {
+  background: url("../img/partners-icons/tv-icon.svg") #ff4e50 no-repeat center;
+}
+
+.partners-item:nth-child(4n+2) .photo-wrapper::after {
+  background: url("../img/partners-icons/bottle-icon.svg") #ffa507 no-repeat
+    center;
+}
+
+.partners-item:nth-child(4n+3) .photo-wrapper::after {
+  background: url("../img/partners-icons/cup-icon.svg") #1cd7ad no-repeat center;
+}
+
+.partners-item:nth-child(4n+4) .photo-wrapper::after {
+  background: url("../img/partners-icons/paper-airplane-icon.svg") #4e73db
+    no-repeat center;
+}
+
+.partner-name {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  padding: 20px 0;
+}
+
+.partner-about {
+  color: #666;
+}
