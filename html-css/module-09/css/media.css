@@ -17,10 +17,18 @@
     padding: 30px 0;
     min-height: 200px;
   }
+
   .site-slogan-desc {
-    font-size: 18px;
-    padding: 20px 0;
     margin: 0 auto;
+    padding: 20px 30px;
+    font-size: 18px;
+  }
+
+  .partners-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .button{
+    width: 100%;
   }
 }
 
@@ -35,9 +43,9 @@
   }
 
   .site-slogan-desc {
-    font-size: 24px;
-    padding: 30px 0;
     margin: 0 auto;
+    padding: 30px 0;
+    font-size: 24px;
   }
 
   .site-nav {
@@ -51,13 +59,22 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 999px) {
+@media (min-width: 768px) and (max-width: 991px) {
   
   .header-wrapper {
     background: linear-gradient(rgba(26, 25, 21, 0.2), rgba(26, 25, 21, 0.2)),
       url("../img/header-bg-768px.jpg") no-repeat;
     background-size: cover;
   }
+
+   .partners-item {
+    margin-bottom: 50px;
+  }
+
+  .partners-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  } 
+
 }
 
 @media (min-width: 992px) {
@@ -65,5 +82,8 @@
     background: linear-gradient(rgba(26, 25, 21, 0.2), rgba(26, 25, 21, 0.2)),
       url("../img/header-bg-1440px.jpg") no-repeat;
     background-size: cover;
+  }
+  .partner-about {
+    padding: 0;
   }
 }

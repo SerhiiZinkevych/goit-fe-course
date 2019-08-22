@@ -70,7 +70,7 @@ body {
 
 .site-slogan {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -86,6 +86,7 @@ body {
 .button {
   display: block;
   margin: 0 auto;
+  padding: 0 30px;
   text-align: center;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   line-height: 40px;
@@ -94,7 +95,6 @@ body {
 }
 
 .find-partner-btn {
-  width: 280px;
   color: #fff;
   background-color: #ff4e50;
   border:none;
@@ -104,7 +104,6 @@ body {
   background-color: #fff;
   border: 2px solid #ff4e50;
   color: #ff4e50;
-  padding: 0 30px;
 }
 
 .partners-section {
@@ -113,13 +112,12 @@ body {
 
 .partners-title {
   padding-top: 65px;
+  margin-bottom: 20px;
+  color: #333;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #333;
-  font-weight: 700;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .partners-list {
@@ -128,12 +126,11 @@ body {
   justify-content: center;
   list-style-type: none;
   margin-bottom: 30px;
-  box-sizing: content-box;
 }
 
 .partners-item {
-  text-align: center;
   width: 220px;
+  text-align: center;
 }
 
 .partner-link {
@@ -142,10 +139,10 @@ body {
 }
 
 .photo-wrapper {
+  display: block;
   position: relative;
   width: 120px;
   margin: 0 auto;
-  display: block;
 }
 
 .partner-photo {
@@ -185,13 +182,14 @@ body {
 }
 
 .partner-name {
+  padding: 20px 0;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #333;
-  padding: 20px 0;
 }
 
 .partner-about {
+  padding:0 30px; 
   color: #666;
 }
