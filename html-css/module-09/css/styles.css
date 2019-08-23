@@ -49,6 +49,7 @@ body {
 .site-menu {
   display: flex;
   list-style: none;
+  justify-content: center;
 }
 
 .login,
@@ -192,4 +193,8 @@ body {
 .partner-about {
   padding:0 30px; 
   color: #666;
+}
+
+.button{
+  max-width: 280px;
 }

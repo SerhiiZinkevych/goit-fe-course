@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
   .container {
-    width: 320px;
+    max-width: 320px;
   }
 
   .header-wrapper {
@@ -9,7 +9,7 @@
     background-size: cover;
   }
 
-  .site-logo{
+  .logo-wrapper{
     order:1;
   }
 
@@ -26,9 +26,6 @@
 
   .partners-item:not(:last-child) {
     margin-bottom: 30px;
-  }
-  .button{
-    width: 100%;
   }
 }
 
