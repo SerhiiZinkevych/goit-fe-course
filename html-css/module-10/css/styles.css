@@ -241,7 +241,7 @@ main {
 
 .team{
   /* todo  */
-  padding-bottom: 80px;
+      padding-bottom: 80px;
 }
 
 .team__description {
@@ -256,18 +256,18 @@ main {
   list-style: none;
 }
 
-.team-member__card {
+.team-member {
   position: relative;
   width: 380px;
-  height: 470px;
+  /* height: 470px; */
   background-color: var(--theme-color-main);
 }
 
-.team-member__card:hover .team-member__photo {
+.team-member:hover .team-member__photo {
   transform: translate(-10px, -10px);
 }
 
-.team-member__card:hover .social-icons {
+.team-member:hover .social-icons {
   transform: translate(-10px, -10px);
   opacity: 1;
 }
@@ -275,8 +275,8 @@ main {
 /* GRADIENT BOX */
 .social-icons {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 380px;
+  height: 470px;
   opacity: 0;
   background: linear-gradient(
     to bottom,
@@ -288,6 +288,7 @@ main {
 }
 
 .team-member__photo {
+  display: block;
   transition: transform 0.2s linear;
 }
 
@@ -341,6 +342,7 @@ main {
 
 .team-member__info {
   padding-top: 20px;
+  background-color: #fff;
 }
 
 .team-member__name {
