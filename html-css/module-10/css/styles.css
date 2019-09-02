@@ -1,0 +1,431 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300i,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
+
+html {
+  box-sizing: border-box;
+  --page-width: 1200px;
+  --theme-color-main: #95e1d3;
+  --theme-color-primary-accents: #f38181;
+  --theme-color-secondary-accents: #fce38a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
+.button{
+  cursor: pointer;
+}
+
+main {
+  margin-bottom: 80px;
+}
+
+.container {
+  width: var(--page-width);
+  margin: 0 auto;
+}
+
+/* HEADER + NAVIGATION */
+.page-header {
+  min-height: 1000px;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+}
+
+.page-nav {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: block;
+  font: bold 30px "Montserrat";
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-navigation {
+  display: flex;
+  flex-basis: 500px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.site-navigation__item{
+/* todo  */
+
+}
+
+.site-navigation__link {
+  display: block;
+  font: 400 14px "Montserrat";
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-navigation__link:hover {
+  color: var(--theme-color-secondary-accents);
+}
+
+.site-navigation__link::after {
+  display: block;
+  content: "";
+  background-color: var(--theme-color-secondary-accents);
+  width: 100%;
+  height: 3px;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.site-navigation__link:hover::after {
+  opacity: 1;
+}
+
+.page-slogan{
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 150px;
+  line-height: 1;
+  text-align: center; 
+  text-transform: uppercase;
+  padding:120px 0;
+}
+
+.page-slogan__highlight{
+  display: block;
+  font-family: "Kaushan Script";
+  font-size: 72px;
+  text-transform: capitalize;
+}
+
+.button{
+  /* todo  */
+}
+
+.header-button{
+  display: block;
+  border: solid 3px #fff;
+  background: transparent;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  padding:5px 20px;
+  margin: 0 auto;
+}
+
+/* SERVICES SECTION */
+.services {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font: bold 30px "Montserrat";
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.section-title__highlight{
+  display: block;
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  text-transform: initial;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+.section-title::after {
+  display: block;
+  background-color: rgb(243, 129, 129);
+  content: "";
+  width: 60px;
+  height: 3px;
+  margin: 30px auto 0 auto;
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.services__link {
+  display: block;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #999999;
+}
+
+.services__item {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.services__item:nth-last-child(-n + 3) {
+  margin: 0;
+}
+
+.services__title {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: rgb(51, 51, 51);
+}
+
+.services__description {
+  max-width: 300px;
+}
+
+/* SERVICES ICONS */
+.services__item::before {
+  display: block;
+  min-width: 80px;
+  height: 80px;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.services__item--clock-icon::before {
+  background-image: url("../img/services-icons/alarm.png");
+}
+
+.services__item--book-icon::before {
+  background-image: url("../img/services-icons/book.png");
+}
+
+.services__item--computer-icon::before {
+  background-image: url("../img/services-icons/computer_ok.png");
+}
+
+.services__item--image-icon::before {
+  background-image: url("../img/services-icons/image.png");
+}
+
+.services__item--home-icon::before {
+  background-image: url("../img/services-icons/home.png");
+}
+
+.services__item--line-graph-icon::before {
+  background-image: url("../img/services-icons/line_graph.png");
+}
+
+/* TEAM SECTION */
+
+.team{
+  /* todo  */
+  padding-bottom: 80px;
+}
+
+.team__description {
+  padding: 0 110px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.team-member__card {
+  position: relative;
+  width: 380px;
+  height: 470px;
+  background-color: var(--theme-color-main);
+}
+
+.team-member__card:hover .team-member__photo {
+  transform: translate(-10px, -10px);
+}
+
+.team-member__card:hover .social-icons {
+  transform: translate(-10px, -10px);
+  opacity: 1;
+}
+
+/* GRADIENT BOX */
+.social-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 129, 129, 0.9),
+    rgba(252, 227, 138, 0.9)
+  );
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  z-index: 1;
+}
+
+.team-member__photo {
+  transition: transform 0.2s linear;
+}
+
+.social-icons__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.social-icons__item{
+  /* todo  */
+}
+
+/* TEAM MEMBER SOCIAL ICONS */
+.social-icons__link {
+  display: block;
+  width: 56px;
+  height: 56px;
+  text-decoration: none;
+  margin-right: 1px;
+  transition: background-color 0.2s linear;
+}
+
+.social-icons__link:hover,
+.social-icons__link:focus {
+  background-color: var(--theme-color-main);
+}
+
+.social-icons__link--facebook {
+  background: no-repeat center url("../img/social-icons/facebook.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.social-icons__link--twitter {
+  background: no-repeat center url("../img/social-icons/twitter.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.social-icons__link--pinterest {
+  background: no-repeat center url("../img/social-icons/pinterest.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.social-icons__link--instagram {
+  background: no-repeat center url("../img/social-icons/instagram.png"),
+    var(--theme-color-secondary-accents);
+}
+
+.team-member__info {
+  padding-top: 20px;
+}
+
+.team-member__name {
+  padding: 10px 0;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.team-member__position {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  color: rgb(153, 153, 153);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 63px;
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+.copyrights {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+
+.copyrights__author {
+  color: var(--theme-color-primary-accents);
+}
+
+.subscribe-form {
+  display: flex;
+  height: 40px;
+}
+
+.subscribe-form__email {
+  padding: 10px;
+  min-width: 230px;
+  border: 1px solid rgb(229, 229, 229);
+  border-right: none;
+  font-style: italic;
+}
+
+.subscribe-form__email::placeholder {
+  color: #ccc;
+}
+
+.subscribe-form__button {
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--theme-color-main);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.subscribe-form__button:hover {
+  background-color: var(--theme-color-primary-accents);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

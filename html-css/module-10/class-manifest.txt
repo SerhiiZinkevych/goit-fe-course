@@ -1,0 +1,64 @@
+link
+
+page-header
+
+page-nav
+
+container
+
+site-logo
+
+site-navigation
+    site-navigation__item
+    site-navigation__link
+
+page-slogan
+    page-slogan__highlight
+
+button
+    
+header-button
+
+services
+    services__list
+    services__item
+        services__item--clock-icon
+        services__item--line-graph-icon
+        services__item--computer-icon
+        services__item--book-icon
+        services__item--home-icon
+        services__item--image-icon
+    services__wrapper
+    services__title
+    services__description
+
+
+section-title
+    section-title__highlight
+
+team
+    team__description
+    team__list
+
+team-member
+    team-member__photo
+    team-member__info
+    team-member__name
+    team-member__position
+
+social-icons (socials-wrapper)
+    social-icons__list
+    social-icons__item
+    social-icons__link
+        social-icons__link--facebook
+        social-icons__link--twitter
+        social-icons__link--pinterest
+        social-icons__link--instagram
+
+
+copyrights
+    copyrights__author
+
+subscribe-form
+    subscribe-form__email
+    subscribe-form__button
