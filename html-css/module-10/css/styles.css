@@ -25,6 +25,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: #999999;
+  min-width: var(--page-width);
 }
 
 .button{
