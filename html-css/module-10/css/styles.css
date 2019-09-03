@@ -26,6 +26,7 @@ body {
   line-height: 24px;
   color: #999999;
 }
+
 .button{
   border: none;
   cursor: pointer;
@@ -92,7 +93,7 @@ main {
   color: var(--theme-color-secondary-accents);
 }
 
-.site-navigation__link::after {
+.site-navigation__item::after {
   display: block;
   content: "";
   background-color: var(--theme-color-secondary-accents);
@@ -101,8 +102,21 @@ main {
   opacity: 0;
   margin-top: 10px;
 }
+/* .site-navigation__item:last-child {
+  display:none;
+}   */
 
-.site-navigation__link:hover::after {
+.site-navigation__link--icon{
+  width: 18px;
+  height: 15px;
+  fill:#fff;
+}
+
+.site-navigation__link:hover .site-navigation__link--icon{
+  fill: var(--theme-color-secondary-accents);
+}
+
+.site-navigation__item:not(:nth-last-child(-n + 2)):hover::after {
   opacity: 1;
 }
 
@@ -135,6 +149,11 @@ main {
   font-weight: bold;
   padding:10px 30px;
   margin: 0 auto;
+  transition: background-color .2s linear;
+}
+
+.header-button:hover{
+  background-color: var(--theme-color-primary-accents);
 }
 
 /* SERVICES SECTION */
