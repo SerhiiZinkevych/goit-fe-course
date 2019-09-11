@@ -1,0 +1,52 @@
+.team__description {
+  padding: 0 110px;
+  margin-bottom: 90px;
+  @include center-flex('ver');
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  @extend %list;
+}
+
+.team-member {
+  position: relative;
+  width: 380px;
+  background-color: $theme-color-main;
+  
+  &:hover .team-member__photo {
+    transform: translate(-10px, -10px);
+  }
+  
+  &:hover .socials {
+    transform: translate(-10px, -10px);
+    opacity: 1;
+  }
+}
+
+.team-member__photo {
+  display: block;
+  transition: transform 0.2s linear;
+}
+
+.team-member__info {
+  padding-top: 20px;
+  background-color: $theme-white-color;
+}
+
+.team-member__name {
+  padding: 10px 0;
+  font-family: $secondary-font-stack;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: $dark-font-color;
+}
+
+.team-member__position {
+  font-family: $main-font-stack;
+  font-style: italic;
+  text-align: center;
+}

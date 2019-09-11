@@ -1,0 +1,44 @@
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 500px;
+  @extend %list;
+}
+
+.site-navigation__link {
+  @extend %link;
+  @include font-settings(14px, 2.5);
+  font-family: $secondary-font-stack;
+  color: $theme-white-color;
+  text-transform: uppercase;
+  
+  &:hover {
+    color: $theme-color-secondary-accents;
+  }
+
+  &:hover .site-navigation__link--icon {
+    fill: $theme-color-secondary-accents;
+  }
+}
+
+.site-navigation__link--icon {
+  width: 18px;
+  height: 15px;
+  fill: $theme-white-color;
+}
+
+.site-navigation__item {
+  &::after {
+    @include pseudo($display: block);
+    background-color: $theme-color-secondary-accents;
+    height: 3px;
+    width: 0px;
+    margin: 0 auto;
+    transition: width 0.2s linear;
+  }
+
+  &:not(:nth-last-child(-n + 2)):hover::after {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

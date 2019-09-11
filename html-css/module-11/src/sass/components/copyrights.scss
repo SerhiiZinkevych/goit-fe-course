@@ -1,0 +1,9 @@
+.copyrights {
+  @include font-settings(14px, 1.2);
+  font-family: $secondary-font-stack;
+  color: $dark-font-color;
+}
+
+.copyrights__author {
+  color: $theme-color-primary-accents;
+}

@@ -1,0 +1,16 @@
+.page-slogan {
+  @include font-settings (150px, 1);
+  color: $theme-white-color;
+  font-family: $secondary-font-stack;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 120px 0;
+}
+
+.page-slogan__highlight {
+  @include font-settings(72px, 2);
+
+  display: block;
+  font-family: $accents-cont-stack;
+  text-transform: capitalize;
+}

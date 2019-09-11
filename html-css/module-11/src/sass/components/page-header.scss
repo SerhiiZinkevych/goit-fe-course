@@ -1,0 +1,8 @@
+.page-header {
+  min-height: 1000px;
+  @include bg-image($path: '../images/header/banner.jpg');
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/header/banner@2x.jpg');
+  }
+}

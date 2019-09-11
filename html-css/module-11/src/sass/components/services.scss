@@ -1,0 +1,49 @@
+.services__list {
+  @include center-flex('ver');
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @extend %list;
+}
+
+.services__link {
+  font-family: $main-font-stack;
+  color: $main-font-color;
+  @extend %link;
+}
+
+.services__item {
+  display: flex;
+  margin-bottom: 100px;
+  
+  &:nth-last-child(-n + 3) {
+    margin: 0;
+  }
+
+  &::before {
+    @include pseudo($display:block);
+    min-width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+}
+
+.services__title {
+  @include font-settings(14px, 1.2);
+  margin-bottom: 10px;
+  font-family: $secondary-font-stack;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $dark-font-color;
+}
+
+.services__description {
+  max-width: 300px;
+}
+
+$services-icons: clock, book, computer, image, home, line-graph;
+
+@each $icon in $services-icons {
+  .services__item--#{$icon}-icon::before {
+    background-image: url('../images/services-icons/#{$icon}.svg');
+  }  
+}

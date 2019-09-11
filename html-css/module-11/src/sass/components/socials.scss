@@ -1,0 +1,46 @@
+.socials {
+  position: absolute;
+  width: 380px;
+  height: 470px;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba($theme-color-primary-accents, 0.9),
+    rgba($theme-color-secondary-accents, 0.9)
+  );
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  z-index: 1;
+}
+
+.socials__list {
+  @include center-flex('all');
+  flex-basis: 100%;
+  height: 100%;
+  @extend %list;
+}
+
+.socials__link {
+  @include center-flex('all');
+  width: 56px;
+  height: 56px;
+  margin-right: 1px;
+  transition: background-color 0.2s linear;
+  background-color: $theme-color-secondary-accents;
+  @extend %link;
+
+  &:hover,
+  &ß:focus {
+    background-color: $theme-color-primary-accents;
+  }
+
+  &:hover .socials__icon {
+    fill: $theme-white-color;
+  }
+}
+
+.socials__icon {
+  width: 30px;
+  height: 30px;
+  fill: $theme-color-primary-accents;
+  transition: fill 0.2s linear;
+}

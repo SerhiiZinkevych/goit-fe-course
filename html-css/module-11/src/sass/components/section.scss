@@ -1,0 +1,27 @@
+.section {
+  margin-bottom: 80px;
+}
+
+.section__title {
+  font: bold 30px $secondary-font-stack;
+  color: $dark-font-color;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px 0;
+
+  &::after {
+    @include pseudo($display: block);
+    background-color: $theme-color-primary-accents;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0 auto;
+  }
+}
+
+.section__title-highlight {
+  display: block;
+  @include font-settings(24px, 50px);
+  font-family: $accents-cont-stack;
+  text-transform: initial;
+  font-weight: 300;
+}

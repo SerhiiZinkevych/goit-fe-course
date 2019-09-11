@@ -1,0 +1,32 @@
+.subscribe-form {
+  display: flex;
+  height: 40px;
+}
+
+.subscribe-form__email {
+  padding: 10px;
+  min-width: 230px;
+  border: 1px solid $border-color;
+  border-right: none;
+  font-style: italic;
+
+  &::placeholder {
+    color: $border-color;
+  }
+}
+
+.subscribe-form__button {
+  padding: 10px 30px;
+  background-color: $theme-color-main;
+  color: $theme-white-color;
+  text-transform: uppercase;
+  font-family: $secondary-font-stack;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s linear;
+  
+  &:hover {
+    background-color: $theme-color-primary-accents;
+  }
+}
+

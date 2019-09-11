@@ -1,0 +1,17 @@
+.header-button {
+  display: block;
+  border: solid 3px $theme-white-color;
+  background: transparent;
+  text-transform: uppercase;
+  color: $theme-white-color;
+  @include font-settings(14px,1.2);
+  font-family: $secondary-font-stack;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 0 auto;
+  transition: background-color 0.2s linear;
+  
+  &:hover {
+    background-color: $theme-color-primary-accents;
+  }
+}
