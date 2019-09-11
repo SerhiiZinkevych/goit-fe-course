@@ -21,7 +21,7 @@
 .section__title-highlight {
   display: block;
   @include font-settings(24px, 50px);
-  font-family: $accents-cont-stack;
+  font-family: $accents-font-stack;
   text-transform: initial;
   font-weight: 300;
 }
