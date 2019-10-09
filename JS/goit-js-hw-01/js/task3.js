@@ -1,11 +1,19 @@
-const correctPassword = "jqueryismyjam";
-const password = prompt("Введите пароль доступа:");
-if (password) {
-  if (password === correctPassword) {
-    alert("Доступ в секретный бункер разрешен!");
+"use strict";
+
+function task3() {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  const passwordFromUser = prompt("Введите пароль доступа:");
+  let message;
+
+  if (passwordFromUser) {
+    if (passwordFromUser === ADMIN_PASSWORD) {
+      message = "Добро пожаловать!";
+    } else {
+      message = "Доступ запрещен, неверный пароль!";
+    }
   } else {
-    alert("Неверный пароль, активирована система защиты!");
+    message = "Отменено пользователем!";
   }
-} else {
-  alert("Была нажата отмена!");
+
+  alert(message);
 }

@@ -1,21 +1,30 @@
 "use strict";
 
-let credits = 23580;
+function task4() {
+  let credits = 23580;
 
-const pricePerDroid = 3000;
+  const pricePerDroid = 3000;
 
-const qty = Number(prompt("Введите к-во дроидов для покупки:"));
+  let quantity = prompt("Введите к-во дроидов для покупки:");
 
-if (qty) {
-  const totalPrice = qty * pricePerDroid;
-  if (totalPrice > credits) {
-    console.log("Недостаточно средств на счету!");
+  if (quantity) {
+    quantity = Number(quantity);
+    if (quantity) {
+      const totalPrice = quantity * pricePerDroid;
+      if (totalPrice > credits) {
+        console.log("Недостаточно средств на счету!");
+      } else {
+        credits = credits - totalPrice;
+        console.log(
+          `Вы купили ${quantity} дроидов, на счету осталось ${credits} кредитов.`
+        );
+      }
+    } else {
+      console.log("Необходимо ввести число!");
+    }
+  } else if (quantity === "") {
+    console.log("Необходимо ввести число!");
   } else {
-    credits = credits - totalPrice;
-    console.log(
-      `Вы купили ${qty} дроидов, на счету осталось ${credits} кредитов.`
-    );
+    console.log("Отменено пользователем!");
   }
-} else {
-  console.log("Отменено пользователем!");
 }
