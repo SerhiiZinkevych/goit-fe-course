@@ -10,17 +10,14 @@ const inventory = {
   }
 };
 
-const invokeInventoryAction = (itemName, action) =>
-  //Метод call() вызывает функцию с указанным значением this
-  //и индивидуально предоставленными аргументами.
-  action.call(inventory, itemName);
+const invokeInventoryAction = (itemName, action) => action(itemName);
 
-invokeInventoryAction("Аптечка", inventory.add);
+invokeInventoryAction("Аптечка", inventory.add.bind(inventory));
 // Invoking add opeartion on Аптечка
 
 console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
-invokeInventoryAction("Фильтр", inventory.remove);
+invokeInventoryAction("Фильтр", inventory.remove.bind(inventory));
 //Invoking remove opeartion on Фильтр
 
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
