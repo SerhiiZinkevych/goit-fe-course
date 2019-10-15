@@ -3,7 +3,7 @@
 function getAllPropValues(arr, prop) {
   let result = [];
   for (let el of arr) {
-    if (el[prop]) {
+    if (prop in el) {
       result.push(el[prop]);
     }
   }

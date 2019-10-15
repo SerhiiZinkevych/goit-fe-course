@@ -1,11 +1,15 @@
 "use strict";
 
 function findBestEmployee(employees) {
-  let max = Object.entries(employees)[0];
-  for (let employee of Object.entries(employees)) {
-    max = employee[1] > max[1] ? employee : max;
-  }
-  return max[0];
+  // let max = Object.entries(employees)[0];
+  // for (let employee of Object.entries(employees)) {
+  //   max = employee[1] > max[1] ? employee : max;
+  // }
+  // return max[0];
+  return Object.entries(employees).reduce(
+    (prev, curr) => (curr[1] > prev[1] ? curr : prev),
+    Object.entries(employees)[0]
+  )[0];
 }
 
 console.log(
