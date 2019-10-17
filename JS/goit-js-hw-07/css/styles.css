@@ -1,0 +1,27 @@
+#gallery {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  /* padding: 0;
+  margin: 0; */
+}
+#gallery li img {
+  width: auto;
+  height: 300px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+.task p {
+  font-size: 25px;
+}
