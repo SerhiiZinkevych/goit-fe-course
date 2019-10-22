@@ -18,9 +18,14 @@ console.log(`В списке ${categoriesList.children.length} категори�
 
 const items = document.querySelectorAll("#categories .item");
 
-items.forEach(item => {
-  const title = item.querySelector("h2");
-  const elements = item.querySelectorAll("ul li");
-  console.log(`Категория: ${title.textContent}`);
-  console.log("Количество элементов: ", elements.length);
+// items.forEach(item => {
+//   const title = item.querySelector("h2");
+//   const elements = item.querySelectorAll("ul li");
+//   console.log(`Категория: ${title.textContent}`);
+//   console.log("Количество элементов: ", elements.length);
+// });
+
+[...categories.children].map(e => {
+  console.log("Категория: ", e.children[0].textContent);
+  console.log("Количество элементов: ", e.children[1].children.length);
 });

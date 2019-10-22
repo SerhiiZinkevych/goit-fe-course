@@ -38,15 +38,25 @@ function getRandomRGB() {
 
 function createBoxes(amount) {
   let size = 30;
-  let randomBoxes = [];
+  // let randomBoxes = [];
 
-  for (let i = 0; i < amount; i += 1) {
-    let el = document.createElement("div");
-    el.style.width = size + "px";
-    el.style.height = size + "px";
-    el.style.backgroundColor = `rgb(${getRandomRGB()},${getRandomRGB()},${getRandomRGB()})`;
-    randomBoxes.push(el);
+  // for (let i = 0; i < amount; i += 1) {
+  //   let el = document.createElement("div");
+  //   el.style.width = size + "px";
+  //   el.style.height = size + "px";
+  //   el.style.backgroundColor = `rgb(${getRandomRGB()},${getRandomRGB()},${getRandomRGB()})`;
+  //   randomBoxes.push(el);
+  //   size += 10;
+  // }
+
+  let randomBoxes = new Array(amount).fill(null).map(box => {
+    box = document.createElement("div");
+    box.style.width = size + "px";
+    box.style.height = size + "px";
+    box.style.backgroundColor = `rgb(${getRandomRGB()},${getRandomRGB()},${getRandomRGB()})`;
     size += 10;
-  }
+    return box;
+  });
+
   return randomBoxes;
 }
