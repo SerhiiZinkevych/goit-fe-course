@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SerhiiZinkevych/goit-js-hw-10-food-service.git"
+    "url": "git+https://github.com/SerhiiZinkevych/goit-fe-course.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Serhii Zinkevych <zinkevych@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SerhiiZinkevych/goit-js-hw-10-food-service/issues"
+    "url": "https://github.com/SerhiiZinkevych/goit-fe-course/issues"
   },
-  "homepage": "https://serhiizinkevych.github.io/goit-js-hw-10-food-service",
+  "homepage": "https://serhiizinkevych.github.io/goit-fe-course/",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
