@@ -14,7 +14,8 @@ const refs = {
 refs.inputField.addEventListener('input', debounce(getData, 500));
 
 function getData() {
-  if (!inputField.value) {
+  const inputValue = inputField.value;
+  if (!inputValue) {
     refs.content.innerHTML = '';
     return;
   }
