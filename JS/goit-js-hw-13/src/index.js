@@ -69,6 +69,7 @@ function handleResponse(hits) {
     if (document.body.clientHeight < window.innerHeight) {
       infScrollInstance.loadNextPage();
     }
+    window.scrollBy(0, window.innerHeight);
   });
 }
 
