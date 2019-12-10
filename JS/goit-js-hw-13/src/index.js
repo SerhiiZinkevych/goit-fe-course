@@ -13,12 +13,10 @@ import galleryItemTemplate from './templates/galleryItemTemplate.hbs';
 
 // к-во картинок за одну загрузку
 const picsPerPage = 12;
+// Ключ pixabay API
+const API_Key = '14481243-ffa5b678be0edea71dcb3ff43';
 
-//использую cors anywhere потому что получаю CORS от pixabay даже когда заливаю на github
-const corsAnyWhere = 'https://cors-anywhere.herokuapp.com/';
-const baseUrl =
-  corsAnyWhere +
-  'https://pixabay.com/api/?key=14481243-ffa5b678be0edea71dcb3ff43';
+const baseUrl = 'https://pixabay.com/api/?key=' + API_Key;
 
 const refs = {
   gallery: document.querySelector('#gallery'),
@@ -45,7 +43,6 @@ const infScrollInstance = new InfiniteScroll('.grid', {
   history: false,
   outlayer: masonryInstance, //указываем InfiniteScroll ссылку на Masonry
   status: '.page-load-status', // анимация загрузки
-
   path: function() {
     return (
       baseUrl +
@@ -118,7 +115,7 @@ refs.formBtn.addEventListener('click', e => {
 });
 
 refs.gallery.addEventListener('click', e => {
-  // если кликнули по картинке basicLightBox покажет большую картинку которая хранится в аттрибуте "dats-source"
+  // если кликнули по картинке basicLightBox покажет большую картинку которая хранится в аттрибуте "data-source"
   if (e.target.tagName === 'IMG') {
     basicLightbox.create(`<img src="${e.target.dataset.source}">`).show();
   }
