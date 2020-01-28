@@ -55,12 +55,31 @@ images.forEach(image => {
   lazyLoad(image);
 });
 
+let curLi;
+
 function showLightBox(e) {
   e.preventDefault();
-  window.addEventListener("keydown", closeLightBox);
+  window.addEventListener("keydown", handleKeyDown);
   lightbox.classList.add("is-open");
   img.src = "";
   img.src = e.target.dataset.source;
+  curLi = e.target.parentNode.parentNode;
+}
+
+function handleKeyDown(e) {
+  if (e.key === "Escape") {
+    closeLightBox(e);
+    return;
+  }
+
+  if (e.key === "ArrowRight") {
+    curLi = curLi.nextElementSibling ? curLi.nextElementSibling : curLi;
+  }
+
+  if (e.key === "ArrowLeft") {
+    curLi = curLi.previousElementSibling ? curLi.previousElementSibling : curLi;
+  }
+  img.src = curLi.querySelector("img").dataset.source;
 }
 
 function closeLightBox(e) {
@@ -69,11 +88,6 @@ function closeLightBox(e) {
     return;
   }
 
-  if (e.key) {
-    if (e.key !== "Escape") {
-      return;
-    }
-  }
   window.removeEventListener("keydown", closeLightBox);
   lightbox.classList.remove("is-open");
 }

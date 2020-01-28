@@ -89,7 +89,18 @@ console.log(getNamesSortedByFriendsCount(users));
 const getSortedUniqueSkills = users =>
   users
     .reduce((result, { skills }) => [...result, ...skills], [])
-    .filter((value, index, self) => self.indexOf(value) === index);
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .sort();
 
 console.log(getSortedUniqueSkills(users));
+
+//Вариант через flatMap
+const getSortedUniqueSkillsMap = users =>
+  users
+    .flatMap(({ skills }) => skills)
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .sort();
+
+console.log(getSortedUniqueSkillsMap(users));
+
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem' , 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
