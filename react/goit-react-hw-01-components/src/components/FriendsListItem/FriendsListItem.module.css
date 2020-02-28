@@ -1,0 +1,45 @@
+.status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: #66cc33;
+}
+
+.offline {
+  composes: status;
+  background-color: #ff3333;
+}
+
+.status,
+.avatar {
+  margin-right: 10px;
+}
+
+.item {
+  display: flex;
+  background-color: #fff;
+  width: 250px;
+  padding: 10px;
+  align-items: center;
+  box-shadow: 7px 8px 13px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 3px;
+  margin: 10px;
+  transition: all 0.2s linear;
+}
+
+.item:hover {
+  transform: scale(1.03);
+  box-shadow: 7px 8px 33px -4px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.avatar {
+  border-radius: 5px;
+}
+.name {
+  font-family: Arial;
+  font-weight: 600;
+}
