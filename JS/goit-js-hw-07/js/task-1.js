@@ -16,7 +16,7 @@
 const categoriesList = document.querySelector("#categories");
 console.log(`В списке ${categoriesList.children.length} категории.`);
 
-const items = document.querySelectorAll("#categories .item");
+// const items = document.querySelectorAll("#categories .item");
 
 // items.forEach(item => {
 //   const title = item.querySelector("h2");
@@ -25,7 +25,7 @@ const items = document.querySelectorAll("#categories .item");
 //   console.log("Количество элементов: ", elements.length);
 // });
 
-[...categories.children].map(e => {
-  console.log("Категория: ", e.children[0].textContent);
-  console.log("Количество элементов: ", e.children[1].children.length);
+[...categoriesList. ].map(li => {
+  console.log("Категория: ", li.children[0].textContent);
+  console.log("Количество элементов: ", li.children[1].children.length);
 });
