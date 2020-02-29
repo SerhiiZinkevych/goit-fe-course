@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './Profile.module.css';
 import PropTypes from 'prop-types';
 
-//console.log(styles);
-
 const Profile = ({ name, tag, location, avatar, stats }) => (
   <div className={styles.profile}>
     <div className={styles.description}>

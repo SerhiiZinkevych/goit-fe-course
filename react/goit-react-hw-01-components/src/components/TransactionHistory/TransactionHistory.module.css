@@ -1,0 +1,31 @@
+.transactionHistory {
+  font-family: Arial;
+  text-align: center;
+
+  border-spacing: 0;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.transactionHistory tr {
+  height: 50px;
+}
+
+.transactionHistory tr:nth-child(2n) {
+  background-color: #ecf2f3;
+}
+
+.transactionHistory th {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #0098cd;
+  width: 290px;
+}
+.transactionHistory tbody {
+  color: #5c6975;
+}
+
+.transactionHistory tbody td:first-child {
+  text-transform: capitalize;
+}
